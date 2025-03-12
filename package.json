@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "prisma generate --no-engine && next build",
+    "build": "bun x prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
-    "prisma": "bun x prisma generate && bun x prisma db push",
+    "prisma": "bun x prisma generate",
     "seed": "ts-node ./src/seed/seed-dabatase.ts"
   },
   "dependencies": {
