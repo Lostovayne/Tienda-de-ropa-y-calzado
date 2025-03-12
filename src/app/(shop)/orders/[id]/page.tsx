@@ -2,7 +2,6 @@ import { Title } from "@/components";
 import { cn } from "@/lib/twMerge";
 import { initialData } from "@/seed/seed";
 import Image from "next/image";
-import Link from "next/link";
 import { IoCardOutline } from "react-icons/io5";
 
 const productsInCart = [initialData.products[0], initialData.products[1], initialData.products[2]];
