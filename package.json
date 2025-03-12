@@ -2,9 +2,10 @@
   "name": "teslo-shop",
   "version": "0.1.1",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "prisma generate && next build  ",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "prisma": "bun x prisma generate && bun x prisma db push",

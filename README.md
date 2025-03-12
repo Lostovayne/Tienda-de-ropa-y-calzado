@@ -95,6 +95,12 @@ El proyecto utiliza las siguientes dependencias de desarrollo:
 -auth - carpeta de autenticación
 -shop - carpeta de tienda
 
+## Mejoras pendientes de implementar
+
+[] - Implementar la funcionalidad de pago con Stripe.
+[] - Agregar la funcionalidad de búsqueda de productos.
+[] - Implementar la mejora de la metadata de los productos.
+
 ## Licencia
 
 Este proyecto es privado.

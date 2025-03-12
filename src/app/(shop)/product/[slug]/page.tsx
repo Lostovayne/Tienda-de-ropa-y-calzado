@@ -4,7 +4,7 @@ import { cn } from "@/lib/twMerge";
 import { notFound } from "next/navigation";
 // import { initialData } from "../../../../seed/seed";
 import { getProductBySlug } from "@/actions/products/get-product-by-slug";
-import { Metadata, ResolvingMetadata } from "next";
+// import { Metadata, ResolvingMetadata } from "next";
 import AddToCart from "./ui/AddToCart";
 interface Props {
   params: Promise<{
@@ -12,27 +12,27 @@ interface Props {
   }>;
 }
 
-export async function generateMetadata(props: Props, parent: ResolvingMetadata): Promise<Metadata> {
-  const params = await props.params;
-  // read route params
-  const slug = params.slug;
+// export async function generateMetadata(props: Props, parent: ResolvingMetadata): Promise<Metadata> {
+//   const params = await props.params;
+//   // read route params
+//   const slug = params.slug;
 
-  // fetch data
-  const product = await getProductBySlug(slug);
+//   // fetch data
+//   const product = await getProductBySlug(slug);
 
-  // optionally access and extend (rather than replace) parent metadata
-  // const previousImages = (await parent).openGraph?.images || [];
+//   // optionally access and extend (rather than replace) parent metadata
+//   // const previousImages = (await parent).openGraph?.images || [];
 
-  return {
-    title: product?.title,
-    description: product?.description,
-    openGraph: {
-      title: product?.title,
-      description: product?.description,
-      images: [`/products/${product?.images[1]}`],
-    },
-  };
-}
+//   return {
+//     title: product?.title,
+//     description: product?.description,
+//     openGraph: {
+//       title: product?.title,
+//       description: product?.description,
+//       images: [`/products/${product?.images[1]}`],
+//     },
+//   };
+// }
 
 export default async function ProductPage(props: Props) {
   const params = await props.params;
@@ -40,7 +40,7 @@ export default async function ProductPage(props: Props) {
   const product = await getProductBySlug(slug);
 
   if (!product) {
-   notFound();
+    notFound();
   }
 
   return (
