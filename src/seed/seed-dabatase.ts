@@ -1,6 +1,9 @@
 import { initialData } from "./seed";
-import prisma from "../lib/prisma";
 import { countries } from "./seed-countries";
+import { PrismaClient } from '@prisma/client'
+import { withAccelerate } from '@prisma/extension-accelerate'
+
+const prisma = new PrismaClient().$extends(withAccelerate())
 
 async function main() {
   await Promise.all([

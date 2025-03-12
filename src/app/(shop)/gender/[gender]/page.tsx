@@ -1,4 +1,4 @@
-export const revalidate = 60;
+"use server";
 
 import { getPaginateProductsWithImages } from "@/actions";
 import { Pagination, ProductGrid, Title } from "@/components";
@@ -18,9 +18,7 @@ export default async function CategoryPage(props: Props) {
   const searchParams = await props.searchParams;
   const params = await props.params;
 
-  const {
-    gender
-  } = params;
+  const { gender } = params;
 
   const page = searchParams.page ? parseInt(searchParams.page) : 1;
 
@@ -48,10 +46,7 @@ export default async function CategoryPage(props: Props) {
 
   return (
     <>
-      <Title
-        title={`Articulos ${label[gender]}`}
-        subtitle={`Todos los productos de ${label[gender]}`}
-      />
+      <Title title={`Articulos ${label[gender]}`} subtitle={`Todos los productos de ${label[gender]}`} />
       <ProductGrid products={products} />
       <Pagination totalPages={totalPage} />
     </>

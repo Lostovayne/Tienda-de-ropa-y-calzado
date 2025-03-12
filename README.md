@@ -23,6 +23,7 @@ La versión actual del proyecto es 0.1.0.
 ## Prisma se está utilizando como ORM , sus comandos son
 
 - [Prisma](https://prisma.io)
+- Creacion de una bd de postgresql en neontech pnpx instagres
 - Instalacion de Prisma `pnpm install prisma --save-dev`
 - Inicializar Prisma `pnpm dlx prisma init --datasource-provider PostgreSQL`
 - Crear el Schema de Prisma
